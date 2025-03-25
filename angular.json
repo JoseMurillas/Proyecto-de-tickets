@@ -97,5 +97,13 @@
         }
       }
     }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "css"
+    }
+  },
+  "cli": {
+    "analytics": "fec67697-ec1d-4ef0-ad50-7e77f286470e"
   }
 }
