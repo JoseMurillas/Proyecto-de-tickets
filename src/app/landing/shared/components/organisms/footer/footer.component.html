@@ -1,1 +1,17 @@
-<p>footer works!</p>
+<footer class="bg-white border-t border-blue-500 p-4 mt-auto">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0">
+      <h2 class="text-lg font-bold">TU CONCIERTO YA®</h2>
+    </div>
+
+    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+      <app-footer-services></app-footer-services>
+      <app-footer-contact></app-footer-contact>
+      <app-footer-social></app-footer-social>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 text-xs text-gray-600">
+    © {{currentYear}} TuConciertoYa. Todos los derechos reservados.
+  </div>
+</footer>

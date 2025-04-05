@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
 import { HeaderComponent } from "./shared/components/organisms/header/header.component";
+import { FooterComponent } from "./shared/components/organisms/footer/footer.component";
 
 @Component({
   selector: "app-landing",
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: "./landing.component.html",
   styleUrls: ["./landing.component.css"],
 })
