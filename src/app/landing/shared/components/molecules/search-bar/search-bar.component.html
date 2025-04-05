@@ -1,0 +1,9 @@
+<div class="relative w-full bg-white rounded-full shadow-md">
+  <app-input
+    [(ngModel)]="searchText"
+    placeholder="Buscar..."
+    [inputClass]="'w-full px-4 py-2 rounded-full border border-gray-300 text-black'"
+  ></app-input>
+
+  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-orange-500 cursor-pointer">🔍</span>
+</div>

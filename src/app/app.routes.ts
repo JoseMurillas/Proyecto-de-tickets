@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import path from 'node:path';
 
 export const routes: Routes = [
     {
         path: '',
         loadComponent: () => import('./shared/components/layout/layout.component'),
-        children: [ 
+        children: [
             {
                 path: 'dashboard',
                 loadComponent: () => import('./business/dashboard/dashboard.component'),
@@ -23,8 +22,13 @@ export const routes: Routes = [
                 redirectTo: "dashboard",
                 pathMatch: 'full'
             }
-           
+
         ]
+    },
+    {
+        path: 'inicio',
+        loadComponent: () => import('./landing/landing.component').then(m => m.LandingComponent),
+        pathMatch: 'full'
     },
     {
         path: '**',

@@ -1,0 +1,9 @@
+<input
+  [type]="type"
+  [placeholder]="placeholder"
+  [value]="value"
+  (input)="handleInput($event)"
+  (blur)="onTouched()"
+  [ngClass]="inputClass"
+  [attr.aria-label]="placeholder"
+/>

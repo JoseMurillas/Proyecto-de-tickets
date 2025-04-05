@@ -1,0 +1,9 @@
+<nav class="flex gap-6">
+  <app-nav-link-atom
+    *ngFor="let link of links"
+    [label]="link.label"
+    [href]="link.href"
+    [className]="link.className || 'text-white'"
+    [ngClass]="link.active ? 'text-orange-500' : 'text-white'"
+  ></app-nav-link-atom>
+</nav>

@@ -1,0 +1,17 @@
+<header class="bg-black text-white py-4 px-8 flex justify-between items-center">
+  <div class="flex items-center justify-center text-center leading-none font-bold">
+    <div>
+      <p class="text-lg uppercase">TÚ</p>
+      <p class="text-lg uppercase">CONCIERTO</p>
+      <p class="text-lg uppercase">YA!</p>
+    </div>
+  </div>
+
+  <div class="flex-1 flex justify-center">
+    <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+  </div>
+
+  <div class="flex gap-6 items-center">
+    <app-nav-links [links]="links"></app-nav-links>
+  </div>
+</header>
