@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'app',
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
@@ -11,7 +11,7 @@ export const routes: Routes = [
             },
             {
                 path: 'profile',
-                loadComponent: () => import('./business/profile/profile.component')
+                loadComponent: () => import('./business/profile/profile.component'),
             },
             {
                 path: 'tables',
@@ -26,13 +26,12 @@ export const routes: Routes = [
         ]
     },
     {
-        path: 'inicio',
+        path: '',
         loadComponent: () => import('./landing/landing.component').then(m => m.LandingComponent),
-        pathMatch: 'full'
     },
     {
-        path: '**',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
+      path: '',
+      redirectTo: '', // Redirige a Home si la ruta no existe
+      pathMatch: 'full'
     }
 ];
