@@ -35,6 +35,11 @@ export const routes: Routes = [
             pathMatch: 'full'
           },
           {
+            path: 'sections/conciertos/:id',
+            loadComponent: () => import('./landing/sections/event-detail-section/event-detail-section.component').then(m => m.EventDetailSectionComponent),
+            pathMatch: 'full'
+          },
+          {
             path: 'sections/contactanos',
             loadComponent: () => import('./landing/sections/contactanos-section/contactanos-section.component').then(m => m.ContactanosSectionComponent),
             pathMatch: 'full'

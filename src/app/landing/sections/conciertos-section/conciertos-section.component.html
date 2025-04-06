@@ -16,7 +16,9 @@
       <div class="grid grid-cols-4 grid-rows-3 gap-4 h-auto mx-auto max-w-6xl">
         <div *ngFor="let evento of eventosRelevantes" [ngClass]="evento.gridClasses"
              class="bg-white rounded-4xl shadow-md overflow-hidden cursor-pointer transition-transform transform hover:scale-105 duration-300">
-          <img [src]="evento.imagen" [alt]="evento.nombre" class="w-full h-full object-cover rounded-4xl" />
+          <a [routerLink]="['/sections/conciertos/', evento.id]">
+             <img [src]="evento.imagen" [alt]="evento.nombre" class="w-full h-full object-cover rounded-4xl" />
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,111 @@
+<section class="bg-gray-100 p-6 lg:p-12">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="space-y-4 justify-self-center">
+      <img [src]="evento.lugar.mapa_ubicaciones" alt="Imagen del evento" class="rounded-xl shadow-lg w-[333px] h-[452px] cursor-pointer hover:scale-105 transition-transform duration-300">
+
+      <div class="flex justify-center">
+        <a href="#" class="inline-block bg-orange-600 text-white font-semibold text-xl py-2 px-4 rounded hover:bg-orange-700 transition" target="_blank">
+          LEER COMUNICADO OFICIAL
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-1 space-y-6">
+      <div class="flex justify-self-start">
+        <a [href]="evento.boletos.url_compra" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded flex items-center space-x-2">
+          <span>COMPRAR BOLETOS</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M16 6V4a2 2 0 00-2-2H6a2 2 0 00-2 2v2H2v2h1v9a1 1 0 001 1h12a1 1 0 001-1v-9h1V6h-2zM6 4h8v2H6V4zm10 4H4v9h12V8z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="lg:col-span-1 space-y-6 max-w-3xl">
+        <div class="border border-green-400 p-4 rounded-md bg-white">
+          <h1 class="text-3xl font-bold text-gray-800">{{ evento.evento.nombre }}</h1>
+          <p class="text-gray-600 mt-1">{{ evento.fecha.dia }}, {{ evento.fecha.fecha }} <strong class="text-black">{{ evento.fecha.hora_inicio }}</strong></p>
+        </div>
+
+        <div class="bg-white p-4 border rounded-md max-w-xl">
+          <div *ngFor="let zona of evento.lugar.zonas" class="flex justify-between py-1 border-b last:border-none">
+            <span class="text-gray-700 font-medium text-2xl">{{ zona.nombre }}</span>
+            <span class="text-black font-bold text-2xl">${{ zona.precio | number:'1.0-0' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-1 gap-8 pt-8 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white p-4 rounded-md border">
+      <div class="flex items-center space-x-2">
+        <img src="https://img.icons8.com/ios-filled/24/map-marker.png"
+            alt="Lugar"
+            width="40"
+            height="40"
+            style="filter: invert(51%) sepia(82%) saturate(2013%) hue-rotate(4deg) brightness(99%) contrast(94%);">
+        <div>
+          <p class="text-2xl font-semibold">Lugar:</p>
+          <p class="text-2xl text-gray-500 font-normal">{{ evento.lugar.nombre }}</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+          <img src="https://img.icons8.com/ios-filled/24/calendar.png"
+            alt="Fecha"
+            width="40"
+            height="40"
+            style="filter: invert(51%) sepia(82%) saturate(2013%) hue-rotate(4deg) brightness(99%) contrast(94%);">
+
+           <div>
+          <p class="text-2xl font-semibold">Fecha:</p>
+          <p class="text-2xl text-gray-500 font-normal">{{ evento.fecha.fecha }}</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <img src="https://img.icons8.com/ios-filled/24/clock.png"
+            alt="Hora"
+            width="40"
+            height="40"
+            style="filter: invert(51%) sepia(82%) saturate(2013%) hue-rotate(4deg) brightness(99%) contrast(94%);">
+        <div>
+          <p class="text-2xl font-semibold">Hora:</p>
+          <p class="text-2xl text-gray-500 font-normal">{{ evento.fecha.hora_inicio }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+    <div class="text-left font-semibold text-orange-600 text-3xl">Detalle del Concierto</div>
+    <div class="text-gray-700 text-xl">
+      <p>{{ evento.evento.descripcion }}</p>
+    </div>
+
+    <div class="text-left font-semibold text-orange-600 text-3xl">Venta por etapas</div>
+    <div class="text-gray-700 text-xl">
+      <ul class="list-disc list-inside space-y-1">
+        <li *ngFor="let etapa of evento.venta_etapas">
+          <strong>{{ etapa.nombre }}:</strong> {{ etapa.fecha_inicio | date:'fullDate' }}
+          <span *ngIf="etapa.fecha_fin"> hasta {{ etapa.fecha_fin | date:'fullDate' }}</span>
+          <span *ngIf="!etapa.fecha_fin"> hasta agotar existencias</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="text-left font-semibold text-orange-600 text-3xl">Ubicaciones</div>
+    <div class="text-gray-700 text-xl">
+      <img
+        [src]="evento.boletos.url_compra"
+        alt="Mapa de ubicaciones"
+        class="w-full max-w-md rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+      <p class="mt-2 text-xl">Haz clic en la imagen para ver el mapa completo.</p>
+    </div>
+
+    <div class="text-left font-semibold text-orange-600 text-3xl">No olvidar</div>
+    <div class="text-gray-700 text-xl">
+      <ul class="list-disc list-inside space-y-1">
+        <li *ngFor="let nota of evento.boletos.notas">{{ nota }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
