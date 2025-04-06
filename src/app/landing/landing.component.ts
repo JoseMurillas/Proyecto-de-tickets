@@ -28,8 +28,8 @@ export class LandingComponent {
   navLinks = [
     { label: 'CONCIERTOS', href: 'sections/conciertos', className: 'text-orange-500'},
     { label: 'CONTÁCTANOS', href: 'sections/contactanos', className: 'text-orange-500'},
-    { label: 'INICIA SESIÓN', href: 'login', className: 'text-orange-500'},
-    { label: 'REGÍSTRATE', href: 'register', className: 'text-orange-500'},
+    { label: 'INICIA SESIÓN', href: 'sections/login', className: 'text-orange-500'},
+    { label: 'REGÍSTRATE', href: 'sections/register', className: 'text-orange-500'},
   ];
 
   onSearch(value: string) {

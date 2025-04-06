@@ -46,8 +46,8 @@ export const routes: Routes = [
           },
           { path: '', redirectTo: 'sections/conciertos', pathMatch: 'full' },
           {
-            path: 'login',
-            redirectTo: 'login',
+            path: 'sections/login',
+            loadComponent: () => import('./auth/login/login.component').then(m => m.LoginComponent),
             pathMatch: 'full'
           },
           {
