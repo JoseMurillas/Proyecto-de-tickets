@@ -1,10 +1,23 @@
 import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 import { HeaderComponent } from "./shared/components/organisms/header/header.component";
 import { FooterComponent } from "./shared/components/organisms/footer/footer.component";
 
+interface Evento {
+  nombre: string;
+  imagen: string;
+  detalles?: string;
+}
+
+interface Festival {
+  nombre: string;
+  ubicacion: string;
+  fechas: string;
+}
+
 @Component({
   selector: "app-landing",
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, RouterOutlet],
   templateUrl: "./landing.component.html",
   styleUrls: ["./landing.component.css"],
 })
@@ -13,10 +26,10 @@ export class LandingComponent {
   searchValue: string = "";
 
   navLinks = [
-    { label: 'CONCIERTOS', href: '#', className: 'text-orange-500' },
-    { label: 'CONTÁCTANOS', href: '#', className: 'text-orange-500' },
-    { label: 'INICIA SESIÓN', href: '#', className: 'text-lime-400' },
-    { label: 'REGÍSTRATE', href: '#', className: 'text-lime-400' },
+    { label: 'CONCIERTOS', href: 'sections/conciertos', className: 'text-orange-500'},
+    { label: 'CONTÁCTANOS', href: 'sections/contactanos', className: 'text-orange-500'},
+    { label: 'INICIA SESIÓN', href: 'login', className: 'text-orange-500'},
+    { label: 'REGÍSTRATE', href: 'register', className: 'text-orange-500'},
   ];
 
   onSearch(value: string) {

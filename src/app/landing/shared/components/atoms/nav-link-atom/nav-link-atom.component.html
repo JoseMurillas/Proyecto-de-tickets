@@ -1,5 +1,7 @@
 <a
-  [href]="href"
+  [routerLink]="href"
+  routerLinkActive="text-orange-500"
+  [routerLinkActiveOptions]="{ exact: true }"
   [ngClass]="className"
   class="hover:underline transition-colors"
 >
