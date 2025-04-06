@@ -1,9 +1,8 @@
 <div class="flex flex-col min-h-screen">
   <app-header [links]="navLinks" (search)="onSearch($event)"></app-header>
 
-  <main class="flex-grow mt-8 px-4">
-    <h1 class="text-3xl font-bold">Bienvenido a la página de conciertos</h1>
-    <p>Este es el Home de la aplicación.</p>
+  <main class="flex-grow">
+    <router-outlet></router-outlet>
   </main>
 
   <app-footer></app-footer>
