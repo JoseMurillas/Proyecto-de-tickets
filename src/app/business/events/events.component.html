@@ -1,0 +1,47 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Iterar sobre los eventos -->
+  <div
+    *ngFor="let evento of eventos"
+    class="relative flex flex-col bg-white rounded-lg shadow-md overflow-hidden"
+  >
+    <!-- Encabezado del evento -->
+    <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white p-4">
+      <h3 class="text-lg font-bold">{{ evento.evento.nombre }}</h3>
+      <p class="text-sm">{{ evento.evento.tipo }}</p>
+    </div>
+    <!-- Contenido del evento -->
+    <div class="p-4">
+      <p class="text-sm text-gray-600 mb-2">{{ evento.evento.descripcion }}</p>
+      <p class="text-sm font-medium text-gray-800">
+        <strong>Lugar:</strong> {{ evento.lugar.nombre }}, {{ evento.lugar.direccion }}
+      </p>
+      <p class="text-sm font-medium text-gray-800">
+        <strong>Fecha:</strong> {{ evento.fecha.dia }}, {{ evento.fecha.fecha }}
+      </p>
+      <p class="text-sm font-medium text-gray-800">
+        <strong>Hora:</strong> {{ evento.fecha.hora_inicio }} (Apertura: {{ evento.fecha.hora_apertura }})
+      </p>
+    </div>
+    <!-- Acciones administrativas -->
+    <div class="p-4 border-t flex justify-between">
+      <button
+        class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600"
+        (click)="editarEvento(evento)"
+      >
+        Editar
+      </button>
+      <button
+        class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+        (click)="eliminarEvento(evento.id)"
+      >
+        Eliminar
+      </button>
+      <button
+        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        (click)="verDetalles(evento)"
+      >
+        Ver Detalles
+      </button>
+    </div>
+  </div>
+</div>
