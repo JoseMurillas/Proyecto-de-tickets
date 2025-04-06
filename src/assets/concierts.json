@@ -1,0 +1,347 @@
+[
+    {
+      "id": "evento_metallica_2025",
+      "evento": {
+        "nombre": "METALLICA: LEGENDS OF THRASH",
+        "descripcion": "La legendaria banda de thrash metal regresa con su tour mundial, interpretando sus mayores éxitos en una noche inolvidable.",
+        "tipo": "Concierto",
+        "artistas": ["Metallica"],
+        "organizadores": ["Live Nation", "Ocesa"]
+      },
+      "lugar": {
+        "nombre": "Estadio Atanasio Girardot",
+        "direccion": "Medellín, Colombia",
+        "mapa_ubicaciones": "URL_mapa_metallica",
+        "zonas": [
+          { "nombre": "GRAMILLA VIP", "precio": 950000.00 },
+          { "nombre": "GRAMILLA GENERAL", "precio": 700000.00 },
+          { "nombre": "ORIENTAL ALTA", "precio": 500000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Sábado",
+        "fecha": "28 de Junio de 2025",
+        "hora_inicio": "8:00 PM",
+        "hora_apertura": "6:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa Fan Club",
+          "fecha_inicio": "2025-01-15T10:00:00",
+          "fecha_fin": "2025-01-17T09:59:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-01-17T10:00:00",
+          "fecha_fin": "hasta agotar existencias"
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_metallica",
+        "notas": [
+          "Se recomienda llegar con al menos 2 horas de anticipación.",
+          "Evento con zona de merchandising oficial."
+        ]
+      }
+    },
+    {
+      "id": "evento_shakira_2025",
+      "evento": {
+        "nombre": "SHAKIRA EN CONCIERTO: LAS MUJERES YA NO LLORAN",
+        "descripcion": "La barranquillera más internacional regresa a su país con un show vibrante y lleno de emociones.",
+        "tipo": "Concierto",
+        "artistas": ["Shakira"],
+        "organizadores": ["Sony Music", "Ocesa Colombia"]
+      },
+      "lugar": {
+        "nombre": "Estadio Metropolitano",
+        "direccion": "Barranquilla, Colombia",
+        "mapa_ubicaciones": "URL_mapa_shakira",
+        "zonas": [
+          { "nombre": "VIP FRONTAL", "precio": 880000.00 },
+          { "nombre": "PREFERENCIAL", "precio": 550000.00 },
+          { "nombre": "GENERAL", "precio": 300000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Viernes",
+        "fecha": "18 de Julio de 2025",
+        "hora_inicio": "9:00 PM",
+        "hora_apertura": "7:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa Shakifans",
+          "fecha_inicio": "2025-02-10T09:00:00",
+          "fecha_fin": "2025-02-12T08:59:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-02-12T09:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_shakira",
+        "notas": [
+          "No se permiten cámaras profesionales ni drones.",
+          "Habrá transporte oficial desde puntos estratégicos de la ciudad."
+        ]
+      }
+    },
+    {
+      "id": "evento_reyruiz_2025",
+      "evento": {
+        "nombre": "REY RUIZ: UNA NOCHE DE SALSA",
+        "descripcion": "El ícono de la salsa romántica llega con todos sus clásicos en una velada llena de ritmo y sentimiento.",
+        "tipo": "Concierto",
+        "artistas": ["Rey Ruiz"],
+        "organizadores": ["Salseros Unidos", "Caribe Promotions"]
+      },
+      "lugar": {
+        "nombre": "Centro de Eventos del Caribe",
+        "direccion": "Cartagena, Colombia",
+        "mapa_ubicaciones": "URL_mapa_reyruiz",
+        "zonas": [
+          { "nombre": "FRONTAL", "precio": 350000.00 },
+          { "nombre": "LATERAL", "precio": 250000.00 },
+          { "nombre": "GENERAL", "precio": 150000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Domingo",
+        "fecha": "10 de Agosto de 2025",
+        "hora_inicio": "7:30 PM",
+        "hora_apertura": "6:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa Fans",
+          "fecha_inicio": "2025-03-01T10:00:00",
+          "fecha_fin": "2025-03-03T10:00:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-03-03T10:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_reyruiz",
+        "notas": [
+          "Habrá zona de baile disponible.",
+          "Evento para mayores de 18 años."
+        ]
+      }
+    },
+    {
+      "id": "evento_fonseca_2025",
+      "evento": {
+        "nombre": "FONSECA: VIAJANTE TOUR",
+        "descripcion": "Fonseca presenta su más reciente álbum en una noche mágica llena de pop, folclor y emoción.",
+        "tipo": "Concierto",
+        "artistas": ["Fonseca"],
+        "organizadores": ["TBL Live", "Sony Music Colombia"]
+      },
+      "lugar": {
+        "nombre": "Movistar Arena",
+        "direccion": "Bogotá, Colombia",
+        "mapa_ubicaciones": "URL_mapa_fonseca",
+        "zonas": [
+          { "nombre": "PLATEA", "precio": 480000.00 },
+          { "nombre": "TRIBUNA", "precio": 350000.00 },
+          { "nombre": "GENERAL", "precio": 200000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Jueves",
+        "fecha": "11 de Septiembre de 2025",
+        "hora_inicio": "8:00 PM",
+        "hora_apertura": "6:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa Clientes Bancolombia",
+          "fecha_inicio": "2025-04-15T10:00:00",
+          "fecha_fin": "2025-04-17T09:59:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-04-17T10:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_fonseca",
+        "notas": [
+          "Fonseca interpretará éxitos de toda su carrera.",
+          "Apto para todas las edades."
+        ]
+      }
+    },
+    {
+      "id": "evento_baum_2025",
+      "evento": {
+        "nombre": "BAUM FESTIVAL 2025",
+        "descripcion": "El festival de música electrónica más grande del país regresa con una alineación de DJs internacionales.",
+        "tipo": "Festival",
+        "artistas": ["DJ 1", "DJ 2", "DJ 3", "DJ Internacional"],
+        "organizadores": ["Baum", "Páramo Presenta"]
+      },
+      "lugar": {
+        "nombre": "Corferias",
+        "direccion": "Bogotá, Colombia",
+        "mapa_ubicaciones": "URL_mapa_baum",
+        "zonas": [
+          { "nombre": "GENERAL", "precio": 300000.00 },
+          { "nombre": "VIP", "precio": 600000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Sábado",
+        "fecha": "4 de Octubre de 2025",
+        "hora_inicio": "6:00 PM",
+        "hora_apertura": "4:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Early Bird",
+          "fecha_inicio": "2025-05-01T10:00:00",
+          "fecha_fin": "2025-05-07T10:00:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-05-07T10:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_baum",
+        "notas": [
+          "Evento para mayores de edad.",
+          "Se prohíbe el ingreso de sustancias psicoactivas."
+        ]
+      }
+    },
+    {
+      "id": "evento_stereo_2025",
+      "evento": {
+        "nombre": "FESTIVAL ESTÉREO PICNIC 2025",
+        "descripcion": "Vive tres días de música, arte y experiencias únicas con las mejores bandas y artistas del mundo.",
+        "tipo": "Festival",
+        "artistas": ["Artista A", "Artista B", "Artista C"],
+        "organizadores": ["Páramo Presenta", "T310"]
+      },
+      "lugar": {
+        "nombre": "Campo de Golf Briceño 18",
+        "direccion": "Cundinamarca, Colombia",
+        "mapa_ubicaciones": "URL_mapa_fep",
+        "zonas": [
+          { "nombre": "GENERAL 3 DÍAS", "precio": 800000.00 },
+          { "nombre": "VIP 3 DÍAS", "precio": 1500000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Viernes a Domingo",
+        "fecha": "21 al 23 de Marzo de 2025",
+        "hora_inicio": "1:00 PM",
+        "hora_apertura": "12:00 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa TuBoleta",
+          "fecha_inicio": "2024-12-01T10:00:00",
+          "fecha_fin": "2024-12-10T10:00:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2024-12-10T10:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_fep",
+        "notas": [
+          "El acceso diario se validará con pulsera electrónica.",
+          "Se permitirá el ingreso de botellas reutilizables vacías."
+        ]
+      }
+    },
+    {
+      "id": "evento_francophonie_2025",
+      "evento": {
+        "nombre": "FESTIVAL DE LA FRANCOPHONIE",
+        "descripcion": "Celebración cultural con gastronomía, música y arte de los países francófonos.",
+        "tipo": "Festival Cultural",
+        "artistas": ["Chanteur Francophone", "Banda de Jazz", "DJ Francés"],
+        "organizadores": ["Alianza Francesa", "Embajada de Francia"]
+      },
+      "lugar": {
+        "nombre": "Plaza Cultural La Santamaría",
+        "direccion": "Bogotá, Colombia",
+        "mapa_ubicaciones": "URL_mapa_francophonie",
+        "zonas": [
+          { "nombre": "ENTRADA GENERAL", "precio": 0.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Sábado",
+        "fecha": "22 de Marzo de 2025",
+        "hora_inicio": "10:00 AM",
+        "hora_apertura": "9:00 AM"
+      },
+      "venta_etapas": [],
+      "boletos": {
+        "url_compra": "Registro gratuito en URL_francophonie",
+        "notas": [
+          "Entrada libre con registro previo.",
+          "Apto para todas las edades."
+        ]
+      }
+    },
+    {
+      "id": "evento_andrescalamaro_2025",
+      "evento": {
+        "nombre": "ANDRÉS CALAMARO: TOUR 2025",
+        "descripcion": "El Salmón regresa a Colombia con sus mejores canciones, en un concierto íntimo y lleno de nostalgia.",
+        "tipo": "Concierto",
+        "artistas": ["Andrés Calamaro"],
+        "organizadores": ["El Clan", "Sony Music"]
+      },
+      "lugar": {
+        "nombre": "Teatro Jorge Eliécer Gaitán",
+        "direccion": "Bogotá, Colombia",
+        "mapa_ubicaciones": "URL_mapa_calamaro",
+        "zonas": [
+          { "nombre": "PLATEA", "precio": 380000.00 },
+          { "nombre": "BALCÓN", "precio": 250000.00 }
+        ]
+      },
+      "fecha": {
+        "dia": "Martes",
+        "fecha": "30 de Septiembre de 2025",
+        "hora_inicio": "7:30 PM",
+        "hora_apertura": "6:30 PM"
+      },
+      "venta_etapas": [
+        {
+          "nombre": "Preventa Fans",
+          "fecha_inicio": "2025-05-10T09:00:00",
+          "fecha_fin": "2025-05-12T09:00:00"
+        },
+        {
+          "nombre": "Público General",
+          "fecha_inicio": "2025-05-12T10:00:00",
+          "fecha_fin": null
+        }
+      ],
+      "boletos": {
+        "url_compra": "URL_boletos_calamaro",
+        "notas": [
+          "Evento para mayores de 14 años.",
+          "Duración aproximada: 2 horas."
+        ]
+      }
+    }
+  ]
+  
