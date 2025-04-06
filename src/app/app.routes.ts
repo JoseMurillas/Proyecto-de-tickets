@@ -18,6 +18,14 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/tables/tables.component'),
             },
             {
+                path: 'user',
+                loadComponent: () => import('./business/user/user.component').then(m => m.UserComponent),
+            },
+            {
+                path: 'user/add',
+                loadComponent: () => import('./business/user/user-form/user-form.component').then(m => m.UserFormComponent),
+            },
+            {
                 path: '',
                 redirectTo: "dashboard",
                 pathMatch: 'full'
@@ -31,7 +39,7 @@ export const routes: Routes = [
     },
     {
       path: '',
-      redirectTo: '', // Redirige a Home si la ruta no existe
+      redirectTo: '', 
       pathMatch: 'full'
     }
 ];

@@ -1,0 +1,159 @@
+<div class="mb-8 grid grid-cols-1 gap-8 xl:grid-cols-1">
+  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-lg overflow-hidden">
+    <div class="p-8">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <!-- Campo: Nombre -->
+        <div class="mb-6">
+          <label for="nombre" class="block text-lg font-medium text-gray-700">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            [(ngModel)]="user.nombre"
+            class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+            required
+          />
+        </div>
+
+        <!-- Fila: Tipo de Documento y Número de Documento -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Campo: Tipo de Documento -->
+          <div class="mb-6">
+            <label for="tipo_documento" class="block text-lg font-medium text-gray-700">Tipo de Documento</label>
+            <select
+              id="tipo_documento"
+              name="tipo_documento"
+              [(ngModel)]="user.tipo_documento"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            >
+              <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+              <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+              <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+            </select>
+          </div>
+
+          <!-- Campo: Número de Documento -->
+          <div class="mb-6">
+            <label for="numero_documento" class="block text-lg font-medium text-gray-700">Número de Documento</label>
+            <input
+              type="text"
+              id="numero_documento"
+              name="numero_documento"
+              [(ngModel)]="user.numero_documento"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Campo: Correo -->
+        <div class="mb-6">
+            <label for="correo" class="block text-lg font-medium text-gray-700">Correo</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                [(ngModel)]="user.correo"
+                class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+                required
+            />
+        </div>
+
+        <!-- Fila: Teléfono y Dirección -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Campo: Teléfono -->
+          <div class="mb-6">
+            <label for="telefono" class="block text-lg font-medium text-gray-700">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              [(ngModel)]="user.telefono"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            />
+          </div>
+
+          <!-- Campo: Dirección -->
+          <div class="mb-6">
+            <label for="direccion" class="block text-lg font-medium text-gray-700">Dirección</label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              [(ngModel)]="user.direccion"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Fila: Fecha de Nacimiento y Sexo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Campo: Fecha de Nacimiento -->
+          <div class="mb-6">
+            <label for="fecha_nacimiento" class="block text-lg font-medium text-gray-700">Fecha de Nacimiento</label>
+            <input
+              type="date"
+              id="fecha_nacimiento"
+              name="fecha_nacimiento"
+              [(ngModel)]="user.fecha_nacimiento"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            />
+          </div>
+
+          <!-- Campo: Sexo -->
+          <div class="mb-6">
+            <label for="sexo" class="block text-lg font-medium text-gray-700">Sexo</label>
+            <select
+              id="sexo"
+              name="sexo"
+              [(ngModel)]="user.sexo"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            >
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Fila: Rol -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Campo: Rol -->
+          <div class="mb-6">
+            <label for="role" class="block text-lg font-medium text-gray-700">Rol</label>
+            <select
+              id="role"
+              name="role"
+              [(ngModel)]="user.role"
+              class="mt-2 block w-full rounded-lg border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 text-lg p-3"
+              required
+            >
+              <option value="Administrador">Administrador</option>
+              <option value="Recepcionista">Recepcionista</option>
+              <option value="Cliente">Cliente</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <!-- Botones -->
+        <div class="flex justify-between mt-6">
+            <!-- Botón Regresar -->
+            <a href="/app/user" class="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400 text-lg">
+              Regresar
+            </a>
+  
+            <!-- Botón Guardar -->
+            <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 text-lg" style="background-color: #93F01A; color: white;"
+            >
+              Guardar
+            </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
