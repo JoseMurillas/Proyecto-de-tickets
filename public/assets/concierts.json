@@ -33,7 +33,7 @@
         {
           "nombre": "Público General",
           "fecha_inicio": "2025-01-17T10:00:00",
-          "fecha_fin": "hasta agotar existencias"
+          "fecha_fin": ""
         }
       ],
       "boletos": {

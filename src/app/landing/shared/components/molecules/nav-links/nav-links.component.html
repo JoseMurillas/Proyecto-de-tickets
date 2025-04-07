@@ -3,7 +3,6 @@
     *ngFor="let link of links"
     [label]="link.label"
     [href]="link.href"
-    [className]="link.className || 'text-white'"
-    [ngClass]="link.active ? 'text-orange-500' : 'text-white'"
+    [ngClass]="getClasses(link)"
   ></app-nav-link-atom>
 </nav>

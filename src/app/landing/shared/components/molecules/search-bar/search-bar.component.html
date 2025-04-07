@@ -1,9 +1,23 @@
 <div class="relative w-full bg-white rounded-full shadow-md">
   <app-input
     [(ngModel)]="searchText"
+    (ngModelChange)="onInputChange()"
     placeholder="Buscar..."
     [inputClass]="'w-full px-4 py-2 rounded-full border border-gray-300 text-black'"
   ></app-input>
-
   <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-orange-500 cursor-pointer">🔍</span>
+
+  <ul
+    *ngIf="results.length > 0"
+    class="absolute z-10 mt-2 w-full bg-white text-black rounded shadow-lg max-h-60 overflow-auto"
+  >
+    <li
+      *ngFor="let concert of results"
+      (click)="goToConcert(concert.id)"
+      (keydown.enter)="goToConcert(concert.id)"
+      class="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+    >
+      {{ concert.evento.nombre }}
+    </li>
+  </ul>
 </div>

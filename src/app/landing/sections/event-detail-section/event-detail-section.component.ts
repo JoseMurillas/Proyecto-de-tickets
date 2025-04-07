@@ -18,9 +18,16 @@ export class EventDetailSectionComponent {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.eventosService.getEventoById(id!).subscribe(data => {
-      this.evento = data;
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.loadEvent(id);
     });
   }
+
+  loadEvent(id: string) {
+    this.eventosService.getEventoById(id).subscribe((evento) => {
+      this.evento = evento;
+    });
+  }
+
 }
