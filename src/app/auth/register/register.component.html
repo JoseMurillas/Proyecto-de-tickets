@@ -1,1 +1,57 @@
-<p>register works!</p>
+<h2>REGÍSTRATE</h2>
+
+  <form>
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    </div>
+    <div>
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos" placeholder="Ingresa tus apellidos">
+    </div>
+
+    <div class="doc-row">
+        <div class="tipo-doc">
+            <label for="tipo-documento">Tipo<br> de Documento</label>
+            <select id="tipo-documento">
+              <option value="">Selecciona</option>
+              <option value="cc">CC</option>
+              <option value="ti">TI</option>
+            </select>
+          </div>
+          <div class="num-doc">
+            <label for="documento">No. Documento</label>
+            <input type="text" id="documento" placeholder="Número de documento">
+          </div>
+          <div class="fecha">
+            <label for="fecha">Fecha de Nacimiento</label>
+            <input type="date" id="fecha">
+          </div>
+    </div>
+    <div>
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" placeholder="Ejemplo@correo.com">
+    </div>
+    <div>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="Número de teléfono">
+      </div>
+    <div>
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+    </div>
+
+    <div>
+      <label for="confirmar">Confirmar Contraseña</label>
+      <input type="password" id="confirmar" placeholder="Confirma tu contraseña">
+    </div>
+
+    <div class="button-container">
+      <button type="submit">Crear mi cuenta 🎟️</button>
+      <button type="submit">Cancelar</button>
+    </div>
+  </form>
+
+  <div class="footer-message">
+    Vive la mejor experiencia en cada evento.
+  </div>
