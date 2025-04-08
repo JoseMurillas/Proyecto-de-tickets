@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    color: #9EF01A;
+    text-align: center;
+    margin-top: 40px;
+    font-family: "Montserrat Underline";
+  }
+  
+  form {
+    max-width: 900px;
+    width: 90%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Montserrat";
+    gap: 20px;
+  }
+  
+  input, select {
+    height: 44px; 
+    padding: 10px;
+  }
+  input[type="date"] {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }
+  .doc-row {
+    display: flex;
+    gap: 20px;
+    grid-column: span 2;
+  }
+  .doc-row select {
+      font-family: "Montserrat";
+  }
+  .tipo-doc {
+    width: 112px;
+    font-family: "Montserrat";
+  }
+  
+  .num-doc {
+    width: 280px;
+  
+  }
+  .fecha {
+    flex: 3;
+  }
+  .tipo-doc label,
+  .num-doc label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff5500;
+    font-size: 14px;
+  }
+  .tipo-doc label,
+  .num-doc label,
+  .fecha label {
+    white-space: nowrap; 
+  }
+  
+  
+  .tipo-doc,
+  .num-doc,
+  .fecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  label {
+    display: block;
+    color: #ff5500;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+  }
+  
+  input::placeholder {
+    color: #ffffff;
+    font-family: "Montserrat";
+  
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  .button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat Underline";
+  }
+  
+  button {
+    width: 30%;
+    padding: 18px;
+    background-color: #ff5500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  button:hover {
+    background-color: #9EF01A;
+  }
+  
+  .footer-message {
+    margin-top: 20px;
+    color: #9EF01A;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+  }

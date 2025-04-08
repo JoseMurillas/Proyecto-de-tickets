@@ -51,8 +51,8 @@ export const routes: Routes = [
             pathMatch: 'full'
           },
           {
-            path: 'register',
-            redirectTo: 'register',
+            path: 'sections/register',
+            loadComponent: () => import('./auth/register/register.component').then(m => m.RegisterComponent),
             pathMatch: 'full'
           }
         ]
