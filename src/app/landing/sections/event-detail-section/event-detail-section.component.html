@@ -1,3 +1,4 @@
+
 <section class="bg-gray-100 p-6 lg:p-12">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
     <div class="space-y-4 justify-self-center">
@@ -10,15 +11,17 @@
       </div>
     </div>
 
-    <div class="lg:col-span-1 space-y-6">
-      <div class="flex justify-self-start">
-        <a [href]="evento.boletos.url_compra" target="_blank" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded flex items-center space-x-2">
-          <span>COMPRAR BOLETOS</span>
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M16 6V4a2 2 0 00-2-2H6a2 2 0 00-2 2v2H2v2h1v9a1 1 0 001 1h12a1 1 0 001-1v-9h1V6h-2zM6 4h8v2H6V4zm10 4H4v9h12V8z"/>
-          </svg>
-        </a>
-      </div>
+
+      <div class="lg:col-span-1 space-y-6">
+        <div class="flex justify-self-start">
+          <a [routerLink]="['/sections/payment', evento?.id]"  class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded flex items-center space-x-2">
+            <span>COMPRAR BOLETOS</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16 6V4a2 2 0 00-2-2H6a2 2 0 00-2 2v2H2v2h1v9a1 1 0 001 1h12a1 1 0 001-1v-9h1V6h-2zM6 4h8v2H6V4zm10 4H4v9h12V8z"/>
+            </svg>
+          </a>
+        </div>
+
 
       <div class="lg:col-span-1 space-y-6 max-w-3xl">
         <div class="border border-green-400 p-4 rounded-md bg-white">

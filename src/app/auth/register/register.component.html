@@ -1,1 +1,78 @@
-<p>register works!</p>
+<div class="min-h-screen flex items-center justify-center bg-black px-4">
+    <div class="w-full max-w-4xl p-8 md:p-12 bg-black rounded-2xl shadow-lg">
+        <h2 class="text-4xl font-bold text-lime-500 mb-8 text-center">REGÍSTRATE</h2>
+
+        <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Nombre -->
+            <div>
+                <label for="nombre" class="block text-orange-500 font-semibold mb-2">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Apellidos -->
+            <div>
+                <label for="apellidos" class="block text-orange-500 font-semibold mb-2">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Tipo de Documento -->
+            <div>
+                <label for="tipo_documento" class="block text-orange-500 font-semibold mb-2">Tipo de Documento</label>
+                <input type="text" id="tipo_documento" name="tipo_documento" placeholder="Tipo de Documento" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- No. Documento -->
+            <div>
+                <label for="no_documento" class="block text-orange-500 font-semibold mb-2">No. Documento</label>
+                <input type="text" id="no_documento" name="no_documento" placeholder="No. Documento" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div>
+                <label for="fecha_nacimiento" class="block text-orange-500 font-semibold mb-2">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div>
+                <label for="correo_electronico" class="block text-orange-500 font-semibold mb-2">Correo Electrónico</label>
+                <input type="email" id="correo_electronico" name="correo_electronico" placeholder="Correo Electrónico" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Teléfono -->
+            <div>
+                <label for="telefono" class="block text-orange-500 font-semibold mb-2">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Contraseña -->
+            <div>
+                <label for="contrasena" class="block text-orange-500 font-semibold mb-2">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div>
+                <label for="confirmar_contrasena" class="block text-orange-500 font-semibold mb-2">Confirmar Contraseña</label>
+                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required
+                    class="w-full rounded-lg border border-gray-700 bg-transparent text-white px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-500" />
+            </div>
+        </form>
+
+        <!-- Botón -->
+        <div class="flex justify-center mt-10">
+            <button type="submit"
+                class="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-8 py-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400">
+                Crear mi cuenta 🎟️
+            </button>
+        </div>
+    </div>
+</div>

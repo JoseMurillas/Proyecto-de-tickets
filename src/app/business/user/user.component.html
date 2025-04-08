@@ -1,1 +1,68 @@
-<p>user works!</p>
+<div class="mb-4 grid grid-cols-1 gap-6 xl:grid-cols-1">
+  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-lg overflow-hidden">
+    <!-- Encabezado -->
+    <div class="relative bg-clip-border rounded-t-xl" style="background-color: #FF5500; color: white;">
+      <div class="m-0 flex items-center justify-between p-6">
+        <div>
+          <h6 class="block antialiased tracking-normal font-sans text-lg font-semibold leading-relaxed">
+            Listado de Usuarios
+          </h6>
+          <p class="antialiased font-sans text-sm leading-normal flex items-center gap-1 font-normal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" class="h-4 w-4 text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <strong>6 Usuarios</strong> este mes
+          </p>
+        </div>
+        <!-- Botón para agregar usuarios -->
+        <a href="app/user/add" class="font-semibold py-2 px-4 rounded-lg shadow hover:opacity-90 active:opacity-80 inline-block text-center" style="background-color: #93F01A; color: white;">
+        Agregar Usuario
+      </a>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="p-6 overflow-x-auto">
+      <table class="w-full table-auto border-collapse border border-gray-200">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border border-gray-300 py-3 px-6 text-left text-sm font-semibold text-gray-700 uppercase">
+              Nombre
+            </th>
+            <th class="border border-gray-300 py-3 px-6 text-left text-sm font-semibold text-gray-700 uppercase">
+              Correo
+            </th>
+            <th class="border border-gray-300 py-3 px-6 text-left text-sm font-semibold text-gray-700 uppercase">
+              Tipo de Documento
+            </th>
+            <th class="border border-gray-300 py-3 px-6 text-left text-sm font-semibold text-gray-700 uppercase">
+              Número de Documento
+            </th>
+            <th class="border border-gray-300 py-3 px-6 text-left text-sm font-semibold text-gray-700 uppercase">
+              Rol
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" class="hover:bg-gray-100">
+            <td class="py-4 px-6 border border-gray-300 text-sm text-gray-800">
+              {{ user.nombre }}
+            </td>
+            <td class="py-4 px-6 border border-gray-300 text-sm text-gray-800">
+              {{ user.tipo_documento }}
+            </td>
+            <td class="py-4 px-6 border border-gray-300 text-sm text-gray-800">
+              {{ user.numero_documento }}
+            </td>
+            <td class="py-4 px-6 border border-gray-300 text-sm text-gray-800">
+              {{ user.telefono }}
+            </td>
+            <td class="py-4 px-6 border border-gray-300 text-sm text-gray-800">
+              {{ user.role }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

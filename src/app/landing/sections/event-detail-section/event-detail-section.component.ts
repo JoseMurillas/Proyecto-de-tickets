@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { EventosService } from '../../shared/eventos.service';
 
 @Component({
   selector: 'app-event-detail-section',
-  imports: [CommonModule],
+  standalone: true, 
+  imports: [CommonModule, RouterModule],  
   templateUrl: './event-detail-section.component.html',
   styleUrl: './event-detail-section.component.css'
 })
