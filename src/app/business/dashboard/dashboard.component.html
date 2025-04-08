@@ -36,62 +36,42 @@
       </p>
     </div>
   </div>
-</div>
 
-<!-- Tabla de Ventas -->
-<div class="mb-4 grid grid-cols-1 gap-6 xl:grid-cols-3">
-  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden xl:col-span-2">
-    <div class="relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex items-center justify-between p-6">
-      <div>
-        <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-blue-gray-900 mb-1">Ventas por Evento</h6>
-        <p class="antialiased font-sans text-sm leading-normal flex items-center gap-1 font-normal text-blue-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" class="h-4 w-4 text-blue-500">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-          </svg>
-          <strong>30 eventos</strong> este mes
-        </p>
-      </div>
+  <!-- Nuevos Eventos -->
+  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
+    <div class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-purple-600 to-purple-400 text-white shadow-purple-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-6 h-6 text-white">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"></path>
+        <path d="M12 6a1 1 0 00-1 1v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L13 10.586V7a1 1 0 00-1-1z"></path>
+      </svg>
     </div>
-    <div class="p-6 overflow-x-scroll px-0 pt-0 pb-2">
-      <table class="w-full min-w-[640px] table-auto">
-        <thead>
-          <tr>
-            <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
-              <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Evento</p>
-            </th>
-            <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
-              <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Boletas Vendidas</p>
-            </th>
-            <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
-              <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Ingresos</p>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold">Concierto A</p>
-            </td>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-xs font-medium text-blue-gray-600">1,200</p>
-            </td>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-xs font-medium text-blue-gray-600">$24,000</p>
-            </td>
-          </tr>
-          <tr>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold">Concierto B</p>
-            </td>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-xs font-medium text-blue-gray-600">800</p>
-            </td>
-            <td class="py-3 px-5 border-b border-blue-gray-50">
-              <p class="block antialiased font-sans text-xs font-medium text-blue-gray-600">$16,000</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="p-4 text-right">
+      <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Nuevos Eventos</p>
+      <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">12</h4>
+    </div>
+    <div class="border-t border-blue-gray-50 p-4">
+      <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
+        <strong class="text-green-500">+8%</strong>&nbsp;que el mes pasado
+      </p>
+    </div>
+  </div>
+
+  <!-- Ingresos Totales -->
+  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
+    <div class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-yellow-600 to-yellow-400 text-white shadow-yellow-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-6 h-6 text-white">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"></path>
+        <path d="M12 6a1 1 0 00-1 1v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L13 10.586V7a1 1 0 00-1-1z"></path>
+      </svg>
+    </div>
+    <div class="p-4 text-right">
+      <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Ingresos Totales</p>
+      <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">$1,200,000</h4>
+    </div>
+    <div class="border-t border-blue-gray-50 p-4">
+      <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
+        <strong class="text-green-500">+15%</strong>&nbsp;que el trimestre pasado
+      </p>
     </div>
   </div>
 </div>

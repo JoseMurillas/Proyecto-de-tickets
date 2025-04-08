@@ -8,14 +8,22 @@ export const routes: Routes = [
             {
                 path: 'dashboard',
                 loadComponent: () => import('./business/dashboard/dashboard.component'),
+                data: { title: 'Inicio' }
             },
             {
-                path: 'profile',
-                loadComponent: () => import('./business/profile/profile.component'),
+                path: 'events',
+                loadComponent: () => import('./business/events/events.component').then(m => m.EventsComponent),
+                data: { title: 'Eventos' }
             },
             {
-                path: 'tables',
-                loadComponent: () => import('./business/tables/tables.component'),
+                path: 'user',
+                loadComponent: () => import('./business/user/user.component').then(m => m.UserComponent),
+                data: { title: 'Usuarios' }
+            },
+            {
+                path: 'user/add',
+                loadComponent: () => import('./business/user/user-form/user-form.component').then(m => m.UserFormComponent),
+                data: { title: 'Agregar Usuario' }
             },
             {
                 path: '',
@@ -59,7 +67,7 @@ export const routes: Routes = [
     },
     {
       path: '',
-      redirectTo: '', // Redirige a Home si la ruta no existe
+      redirectTo: '', 
       pathMatch: 'full'
     }
 ];
