@@ -52,6 +52,12 @@ export const routes: Routes = [
             loadComponent: () => import('./landing/sections/contactanos-section/contactanos-section.component').then(m => m.ContactanosSectionComponent),
             pathMatch: 'full'
           },
+          {
+            path: 'sections/payment/:id',
+            loadComponent: () => import('./landing/sections/payment-section/payment-section.component')
+              .then(m => m.PaymentSectionComponent),
+            pathMatch: 'full'
+          },
           { path: '', redirectTo: 'sections/conciertos', pathMatch: 'full' },
           {
             path: 'sections/login',

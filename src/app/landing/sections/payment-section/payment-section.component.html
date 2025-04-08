@@ -1,0 +1,113 @@
+
+<div class="text-center my-6">
+  <div class="mx-auto w-[800px] h-[450px] rounded overflow-hidden">
+    <img [src]="evento.lugar.mapa_ubicaciones"
+         alt="Mapa de asientos"
+         class="w-full h-full object-cover rounded" />
+  </div>
+</div>
+
+
+
+<div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
+
+  
+  <div class="w-full md:w-1/2 text-center bg-black rounded shadow">
+    <img [src]="evento.boletos.url_compra" alt="Mapa del lugar" class="w-full max-h-[400px] object-cover rounded" />
+  </div>
+
+  
+  <div class="w-full md:w-1/2 p-4 text-center md:text-center">
+    <h1 class="text-2xl font-bold uppercase text-black">
+      {{ evento.evento.nombre }}
+    </h1>
+    <p class="text-gray-700 mt-4 leading-relaxed">
+      {{ evento.evento.descripcion }}
+    </p>
+    <p class="text-gray-600 mt-4 text-lg">
+      {{ evento.fecha.dia }}, {{ evento.fecha.fecha }}
+    </p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Selector de entradas -->
+<div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+  <h2 class="text-xl font-semibold text-orange-500 mb-4">Seleccione sus entradas</h2>
+
+  <div class="flex justify-between items-center border p-4 rounded mb-4">
+    <span class="font-medium">{{ evento?.zonaPrincipal?.nombre }}</span>
+    <div class="flex items-center">
+      <button (click)="disminuir()" class="px-2 border">-</button>
+      <input type="number" id="cantidadEntradas" [value]="cantidadEntradas" readonly class="w-12 text-center border-t border-b" />
+      <button (click)="aumentar()" class="px-2 border">+</button>
+    </div>
+    <span class="text-right">COP {{ obtenerTotal() | currency:'COP' }}</span>
+  </div>
+
+  <p class="text-xs text-gray-500">* El valor no incluye costos de servicio ni envío.</p>
+  <p class="text-xs text-gray-500">* Al valor de cada entrada se suma el costo por servicio (no incluye costos de entrega).</p>
+<p class="text-xs text-gray-500">** Otros cargos pueden ser: productos incluidos (merchandising, licor, comida, etc), un monto consumible, impuestos o servicios especiales.</p>
+</div>
+
+
+<!-- Registro -->
+<div class="max-w-3xl mx-auto mt-6">
+  <h3 class="text-xl font-semibold text-orange-500 mb-4">¿Ya estás registrado?</h3>
+  <div class="flex gap-6">
+    <label for="registrado-si">
+      <input id="registrado-si" type="radio" name="registrado" />
+      Sí, estoy registrado
+    </label>
+    <label for="registrado-no">
+      <input id="registrado-no" type="radio" name="registrado" />
+      No, soy un cliente nuevo
+    </label>
+  </div>
+</div>
+
+<!-- Métodos de pago -->
+<div class="max-w-3xl mx-auto mt-6">
+  <h3 class="text-xl font-semibold text-orange-500 mb-4">Seleccione método de pago</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    
+    <label for="pago-tarjeta" class="flex items-center gap-2 border p-3 rounded cursor-pointer">
+      <input id="pago-tarjeta" type="radio" name="pago" class="mr-2" />
+      <span>Tarjeta de crédito o débito</span>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/50px-Visa.svg.png" alt="Tarjeta" class="w-8 h-5 object-contain" />
+      <img src="src\app\landing\sections\payment-section\assets\american2.png" />
+      <img src="../payment-section/assets/diners.jfif" />
+    </label>
+
+    <label for="pago-pse" class="flex items-center gap-2 border p-3 rounded cursor-pointer">
+      <input id="pago-pse" type="radio" name="pago" class="mr-2" />
+      <img src="../payment-section/assets/diners.jfif" alt="PSE" class="w-8 h-5 object-contain" />
+      <span>PSE</span>
+    </label>
+
+    <label for="pago-efectivo" class="flex items-center gap-2 border p-3 rounded cursor-pointer">
+      <input id="pago-efectivo" type="radio" name="pago" class="mr-2" />
+      <img src="https://cdn-icons-png.flaticon.com/512/4072/4072545.png" alt="Efectivo" class="w-6 h-6 object-contain" />
+      <span>Pago en efectivo</span>
+    </label>
+
+  </div>
+</div>
+
+
+<!-- Botón -->
+<div class="max-w-3xl mx-auto mt-6 text-center">
+  <button 
+    class="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition disabled:opacity-50"
+    [disabled]="cantidadEntradas <= 0"
+  >
+    Agregar al carrito y pagar
+  </button>
+</div>
