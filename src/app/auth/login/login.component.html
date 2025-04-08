@@ -1,20 +1,26 @@
-<div class="login-container">
-    <h2>INICIA SESIÓN</h2>
+<div class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/concierto-nw.jpg');">
+  <div class="bg-black bg-opacity-90 p-12 rounded-lg shadow-md w-full max-w-lg border-2 border-lime-500">
+    <h2 class="text-3xl font-bold text-lime-500 mb-8">INICIA SESIÓN</h2>
     <form>
-      <div class="form-group">
-        <label for="username">CORREO ELECTRÓNICO</label>
-        <input type="text" id="username" placeholder="Ingresa tu correo" name="username" required/>
+      <div class="mb-6">
+        <label for="username" class="block text-lime-500 text-sm font-bold mb-2">CORREO ELECTRÓNICO</label>
+        <input type="text" id="username" placeholder="Ingresa tu correo" name="username" required
+          class="shadow appearance-none border rounded w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent border-orange-500" />
       </div>
-      <div class="form-group">
-        <label for="password">CONTRASEÑA</label>
-        <input type="password" id="password" placeholder="Ingresa tu contraseña" name="password" required />
+      <div class="mb-8">
+        <label for="password" class="block text-lime-500 text-sm font-bold mb-2">CONTRASEÑA</label>
+        <input type="password" id="password" placeholder="Ingresa tu contraseña" name="password" required
+          class="shadow appearance-none border rounded w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent border-orange-500" />
       </div>
-      <button class="login-btn" type="submit">Accede a tu cuenta 🎟️</button>
-      
-     
+      <div class="flex items-center justify-between">
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Accede a tu cuenta 🎟️
+        </button>
+      </div>
     </form>
-    <div class="registro">
-        <span class="texto-verde">¿No tienes una cuenta?</span>
-        <a href="registro.html" class="texto-naranja">Regístrate</a>
-      </div>
+    <div class="mt-6 text-center">
+      <span class="text-lime-500">¿No tienes una cuenta?</span>
+      <a href="registro.html" class="text-orange-500">Regístrate</a>
+    </div>
   </div>
+</div>
